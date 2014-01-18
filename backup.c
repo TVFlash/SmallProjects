@@ -28,4 +28,6 @@ int runBackup()
 	system("echo Creating a backup...");
 	system("zip -R Backup.zip ./* ");
 	system("echo Done!");
+	
+	return 0;
 }
