@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
         char fileName[64], usr[32], chown[32];
 
         //Clear old dirs 
-        system("rm -rf config coremods mods Chocolate ./jar/*");
+        system("rm -rf config coremods mods lib Chocolate ./jar/*");
 
         strcpy(fileName, "unzip ");
         strcat(fileName, argv[1]);
