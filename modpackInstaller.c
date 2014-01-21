@@ -12,6 +12,9 @@ int main(int argc, char *argv[])
         char c;
         char fileName[64], usr[32], chown[32];
 
+        //Clear old dirs 
+        system("rm -rf config coremods mods Chocolate ./jar/*");
+
         strcpy(fileName, "unzip ");
         strcat(fileName, argv[1]);
         system(fileName);
@@ -25,7 +28,7 @@ int main(int argc, char *argv[])
         infile = fopen("temp.txt", "r");
         int ret = fscanf(infile, "%s %c",usr,&c);
         fclose(infile);
-        system("rm temp");
+        system("rm temp.txt");
 
         //Queue up the chown
         strcpy(chown, "chown -R ");
