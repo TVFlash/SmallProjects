@@ -14,11 +14,13 @@ int main(int argc, char *argv[])
 
         //Clear old dirs 
         system("rm -rf config coremods mods lib Chocolate ./jar/*");
-
+        
+        //Unzip file then remove
         strcpy(fileName, "unzip ");
         strcat(fileName, argv[1]);
         system(fileName);
-
+        system(strcat("rm -rf", argv[1]));
+        
         //Create a temp file and past the user ID into it
         outfile = fopen("temp.txt", "w");
         system("stat -c %U server.log > temp.txt");
